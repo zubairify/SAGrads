@@ -3,6 +3,7 @@ public class Manager extends Employee {
 	private double commission;
 
 	public Manager() {
+		// Optional call, anyways Child class always calls the default constructor of parent class
 		super();	// Calling default constructor of super class
 	}
 
