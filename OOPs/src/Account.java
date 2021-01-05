@@ -1,14 +1,20 @@
 
-public class Account {
+// Generalised Bank account class
+public abstract class Account {
 	private int acntNo;
 	private String holder;
-	private double balance;
+	protected double balance;
+	
+	// Constants 
+	public static final int INIT_ACNT_NO = 1001;
+	public static final double MIN_SAV_BAL = 1000;
+	public static final double MIN_CUR_BAL = 5000;
 	
 	private static int autogen;
 	
 	static {	// Static initialiser block - executes @ class loading - Good place to initialise static members 
 		System.out.println("Account class loaded...");
-		autogen = 1001;
+		autogen = INIT_ACNT_NO;
 	}
 	
 	public Account() {
@@ -31,12 +37,7 @@ public class Account {
 		balance += amount;
 	}
 	
-	public void withdraw(double amount) {
-		if(amount <= balance) 
-			balance -= amount;
-		else
-			System.out.println("Insufficient balance");
-	}
+	public abstract void withdraw(double amount);
 	
 	public double getBalance() {
 		return balance;
