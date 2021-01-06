@@ -1,3 +1,6 @@
+import com.lti.org.Employee;
+import com.lti.org.Executive;
+import com.lti.org.Manager;
 
 public class TestEmployee {
 

@@ -1,3 +1,5 @@
+import com.lti.cart.Product;
+import com.lti.cart.ShoppingCart;
 
 public class TestShopping {
 

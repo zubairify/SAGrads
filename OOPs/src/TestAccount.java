@@ -1,3 +1,6 @@
+import com.lti.bank.Bank;
+import com.lti.bank.CurrentAccount;
+import com.lti.bank.SavingsAccount;
 
 public class TestAccount {
 
@@ -12,7 +15,7 @@ public class TestAccount {
 		CurrentAccount ca = new CurrentAccount("Kelly");
 		ca.summary();
 		
-		Account a = ca;
+		Bank a = ca;
 		a.summary();
 	
 		a = sa;

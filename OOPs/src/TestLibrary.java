@@ -1,3 +1,5 @@
+import com.lti.lib.Book;
+import com.lti.lib.Member;
 
 public class TestLibrary {
 
