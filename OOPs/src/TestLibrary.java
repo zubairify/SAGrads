@@ -1,4 +1,5 @@
 import com.lti.lib.Book;
+import com.lti.lib.LibraryException;
 import com.lti.lib.Member;
 
 public class TestLibrary {
@@ -10,16 +11,27 @@ public class TestLibrary {
 		Member m1 = new Member("Nancy");
 		m1.status();
 		
-		b1.issueBook(m1);
+		try {
+			b1.issueBook(m1);
+		} catch (LibraryException e) {
+			e.printStackTrace();
+		}
 		
 		b1.status();
 		m1.status();
 		
 		Member m2 = new Member("Roy");
-		b1.issueBook(m2);
+		try {
+			b1.issueBook(m2);
+		} catch (LibraryException e) {
+			System.out.println(e.getMessage());
+		}
 		
 		Book b2 = new Book("Prophecy");
-		b2.issueBook(m1);
-		
+		try {
+			b2.issueBook(m1);
+		} catch (LibraryException e) {
+			System.out.println(e.getMessage());
+		}
 	}
 }

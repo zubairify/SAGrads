@@ -31,12 +31,12 @@ public class Book {
 			System.out.println(title + " is issued to " + member.getName());
 	}
 
-	public void issueBook(Member m) {
+	public void issueBook(Member m) throws LibraryException {
 		// Logic to issue a book
 		if (this.member != null) {
-			System.out.println(title + " is already issued to " + member.getName());
+			throw new LibraryException(title + " is already issued to " + member.getName());
 		} else if (m.getBook() != null) {
-			System.out.println(m.getName() + " has already issued a book");
+			throw new LibraryException(m.getName() + " has already issued a book");
 		} else {
 			this.member = m;
 			m.setBook(this);

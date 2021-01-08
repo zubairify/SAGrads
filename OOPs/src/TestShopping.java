@@ -12,6 +12,12 @@ public class TestShopping {
 		cart.addProduct(new Product("iWatch", 900));
 		cart.addProduct(new Product("iPad", 1250));
 		
+		try {
+			cart.addProduct(null);
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		
 		cart.showOrder();
 	}
 }

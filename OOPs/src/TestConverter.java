@@ -19,6 +19,6 @@ public class TestConverter {
 		System.out.println(cc.convert(zar, inr, 100));
 		System.out.println(cc.convert(inr, zar, 1000));
 		System.out.println(cc.convert(usd, aed, 100));
-		System.out.println(cc.convert(aed, zar, 100));
+		System.out.println(cc.convert(aed, zar, -100));
 	}
 }

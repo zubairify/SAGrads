@@ -10,6 +10,9 @@ public class ShoppingCart {
 	}
 	
 	public void addProduct(Product p) {
+		if(p == null)
+			throw new NullPointerException("Product cannot be null");
+		
 		products[count] = p;
 		count ++;
 		total += p.getPrice();
