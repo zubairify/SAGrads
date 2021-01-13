@@ -52,5 +52,7 @@ public class CollectionDemo {
 		System.out.println("-- Traversing over TreeSet using For-each..loop");
 		for(String s : tree)
 			System.out.println(s);
+		
+		tree.forEach(System.out::println);
 	}
 }
