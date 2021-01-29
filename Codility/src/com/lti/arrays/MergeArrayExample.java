@@ -19,14 +19,14 @@ public class MergeArrayExample {
 		int slen = second.length; // 5
 
 		int[] result = new int[first.length + second.length];
-		// logic to copy elements of first and second into result array
+		// logic to copy elements of first and second into result array O(n+m)
 //		for (int i = 0; i < first.length; i++) 
 //			result[i] = first[i];
 //		
 //		for (int i = 0; i < second.length; i++) 
 //			result[flen + i] = second[i];
 
-		// Optimised solution compare to above code
+		// Optimised solution compare to above code O(n)
 		for (int i = 0; i < (flen > slen ? flen : slen); i++) {
 			if (i < flen)
 				result[i] = first[i];
